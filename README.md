@@ -60,9 +60,9 @@ cd SLDB
     1.  ```bash
         cd esp; ./tools/accgen/accgen.sh
         ```
-    2. Complete the SoC configurations using the values in integrated_acc/$ACCNAME/soc_gen/$ACCNAME_accgen.txt
+    2. Complete the SoC configurations using the values in ``` integrated_acc/$ACCNAME/soc_gen/$ACCNAME_accgen.txt ```
 4. **Add Benchmark RTL to the ESP SoC**: After the SoC generation is complete, you should be able to see a folder at esp/accelerators/rtl/$ACCNAME_rtl/ containing the ESP generated templates for the accelerator code. 
-    1. Copy the contents of integrated_acc/$ACCNAME/$ACCNAME_rtl into esp/accelerators/rtl/$ACCNAME_rtl/. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
+    1. Copy the contents of ``` integrated_acc/$ACCNAME/$ACCNAME_rtl into esp/accelerators/rtl/$ACCNAME_rtl/ ```. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
 
 5. **Generating a bitstream**: 
     1.  ```bash 
@@ -78,8 +78,8 @@ cd SLDB
     4. ```bash 
         make $ACCNAME_rtl-baremetal
         ```
-    5. For simulation: TEST_PROGRAM=./soft-build/ariane/baremetal/$ACCNAME_rtl.exe make sim-gui
-    6. For synthesis: make vivado-syn
+    5. For simulation: ``` TEST_PROGRAM=./soft-build/ariane/baremetal/$ACCNAME_rtl.exe make sim-gui ```
+    6. For synthesis: ``` make vivado-syn ```
 
 
 
