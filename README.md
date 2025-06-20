@@ -78,7 +78,7 @@ cd SLDB
     4. ```bash 
         make $ACCNAME_rtl-baremetal
         ```
-    5. For simulation:
+    5. For simulation: TEST_PROGRAM=./soft-build/ariane/baremetal/$ACCNAME_rtl.exe make sim-gui
     6. For synthesis: make vivado-syn
 
 
