@@ -1,3 +1,6 @@
 [submodule "RTL-Repo"]
 	path = RTL-Repo
 	url = https://github.com/AUCOHL/RTL-Repo.git
+[submodule "vtr-verilog-to-routing"]
+	path = vtr-verilog-to-routing
+	url = https://github.com/sld-columbia/vtr-verilog-to-routing.git
