@@ -55,10 +55,12 @@ cd SLDB
 
 ### Retrieving the third party accelerators
 For the RTL-Repo accelerators:
-1. ```bash
+1. 
+```bash
 python3 get_rtl_repo_acc.py
 ```
-2. ```bash
+2. 
+```bash
 python3 choose_acc_files.py
 ```
 3. Rename the top module of each accelerator to the accelerator name you used for SoC generation
