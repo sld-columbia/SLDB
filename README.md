@@ -53,15 +53,27 @@ Navigate to the directory:
 cd SLDB
 ```
 
-### Running a Benchmark
+### Retrieving the third party accelerators
+For the RTL-Repo accelerators:
+1. ```bash
+python3 get_rtl_repo_acc.py
+```
+2. ```bash
+python3 choose_acc_files.py
+```
+3. Rename the top module of each accelerator to the accelerator name you used for SoC generation
+### SoC Generation
 
 1. **Select Accelerator**: Choose an accelerator from the provided list.
 2. **Configure SoC**:
     1.  ```bash
         cd esp; ./tools/accgen/accgen.sh
         ```
-    2. Complete the SoC configurations using the values in ``` integrated_acc/$ACCNAME/soc_gen/$ACCNAME_accgen.txt ```
-4. **Add Benchmark RTL to the ESP SoC**: After the SoC generation is complete, you should be able to see a folder at esp/accelerators/rtl/$ACCNAME_rtl/ containing the ESP generated templates for the accelerator code. 
+    2. Complete the SoC configurations using the values in ``` integrated_acc/$ACCNAME/soc_gen/$ACCNAME_accgen.txt ``` . You may use a different accelerator name, just make sure that the top module of your accelerator is named the same as the accelerator name you chose.
+
+### Running a Benchmark
+
+4. **Add Benchmark RTL to the ESP SoC**: After the SoC generation is complete, you should be able to see a folder at ``` esp/accelerators/rtl/$ACCNAME_rtl/``` containing the ESP generated templates for the accelerator code. 
     1. Copy the contents of ``` integrated_acc/$ACCNAME/$ACCNAME_rtl into esp/accelerators/rtl/$ACCNAME_rtl/ ```. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
 
 5. **Generating a bitstream**: 
