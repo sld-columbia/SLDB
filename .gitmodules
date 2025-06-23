@@ -4,3 +4,6 @@
 [submodule "vtr-verilog-to-routing"]
 	path = vtr-verilog-to-routing
 	url = https://github.com/sld-columbia/vtr-verilog-to-routing.git
+[submodule "esp"]
+	path = esp
+	url = https://github.com/sld-columbia/esp.git
