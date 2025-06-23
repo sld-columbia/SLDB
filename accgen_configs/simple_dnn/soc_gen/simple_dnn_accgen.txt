@@ -1,0 +1,30 @@
+=== Initializing ESP accelerator template ===
+
+  * Enter accelerator name [dummy]: simple_dnn
+  * Select design flow (Stratus HLS, Vivado HLS, hls4ml, Catapult HLS, RTL) [S]: R
+  * Enter ESP path [/home/elli/sldb_final/esp]: 
+  * Enter unique accelerator id as three hex digits [04A]: 005
+  * Enter accelerator registers
+    - register 0 name [size]: num_in
+    - register 0 default value [1]: 3
+    - register 0 max value [3]: 
+    - register 1 name []: num_out
+    - register 1 default value [1]: 1
+    - register 1 max value [1]: 
+    - register 2 name []: num_hidden
+    - register 2 default value [1]: 8
+    - register 2 max value [8]: 
+    - register 3 name []: 
+  * Configure PLM size and create skeleton for load and store:
+    - Enter data bit-width (8, 16, 32, 64) [32]: 32
+    - Enter input data size in terms of configuration registers (e.g. 2 * num_hidden}) [num_hidden]: num_in
+      data_in_size_max = 4
+    - Enter output data size in terms of configuration registers (e.g. 2 * num_hidden) [num_hidden]: num_out
+      data_out_size_max = 2
+    - Enter an integer chunking factor (use 1 if you want PLM size equal to data size) [1]: 
+      Input PLM has 4 32-bits words
+      Output PLM has 2 32-bits words
+    - Enter number of input data to be processed in batch (can be function of configuration registers) [1]: 
+      batching_factor_max = 1
+
+=== Generated accelerator skeleton for simple_dnn ===

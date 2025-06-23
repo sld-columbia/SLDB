@@ -1,0 +1,29 @@
+=== Initializing ESP accelerator template ===
+
+  * Enter accelerator name [dummy]: fcdnn_acc
+  * Select design flow (Stratus HLS, Vivado HLS, hls4ml, Catapult HLS, RTL) [S]: R
+  * Enter ESP path [/home/elli/sldb_final/esp]: 
+  * Enter unique accelerator id as three hex digits [04A]: 001
+  * Enter accelerator registers
+    - register 0 name [size]: array_size
+    - register 0 default value []: 16
+    - register 0 max value []: 
+    - register 1 name []: mux_cfg
+    - register 1 default value []: 0
+    - register 1 max value []: 1
+    - register 2 name []: pipe_mode
+    - register 2 default value []: 0
+    - register 2 max value []: 1
+    - register 3 name []: runs
+    - register 3 default value []: 1
+    - register 3 max value []: 
+    - register 4 name []: 
+  * Configure PLM size and create skeleton for load and store:
+    - Enter data bit-width (8, 16, 32, 64) [32]: 32
+    - Enter input data size in terms of configuration registers (e.g. 2 * param_width) []: 56
+    - Enter output data size in terms of configuration registers (e.g. 2 * param_width) []: 30
+    - Enter an integer chunking factor (use 1 if you want PLM size equal to data size) []: 
+    - Enter number of input data to be processed in batch (can be function of configuration registers) []: runs
+    - Is output stored in place? [N]: 
+
+=== Generated accelerator skeleton for fcdnn_acc ===

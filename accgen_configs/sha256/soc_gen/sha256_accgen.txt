@@ -1,0 +1,28 @@
+=== Initializing ESP accelerator template ===
+
+  * Enter accelerator name [dummy]: sha256
+  * Select design flow (Stratus HLS, Vivado HLS, hls4ml, Catapult HLS, RTL) [S]: R
+  * Enter ESP path [/home/elli/sldb_final/esp]: 
+  * Enter unique accelerator id as three hex digits [04A]: 007
+  * Enter accelerator registers
+    - register 0 name [size]: sha_msg_size
+    - register 0 default value [1]: 8
+    - register 0 max value [8]: 
+    - register 1 name []: sha_mode
+    - register 1 default value [1]: 0
+    - register 1 max value [0]: 
+    - register 2 name []: 
+  * Configure PLM size and create skeleton for load and store:
+    - Enter data bit-width (8, 16, 32, 64) [32]: 32
+    - Enter input data size in terms of configuration registers (e.g. 2 * sha_mode}) [sha_mode]: sha_msg_size
+      data_in_size_max = 8
+    - Enter output data size in terms of configuration registers (e.g. 2 * sha_mode) [sha_mode]: 8
+      data_out_size_max = 8
+    - Enter an integer chunking factor (use 1 if you want PLM size equal to data size) [1]: 
+      Input PLM has 8 32-bits words
+      Output PLM has 8 32-bits words
+    - Enter number of input data to be processed in batch (can be function of configuration registers) [1]: 
+      batching_factor_max = 1
+    - Is output stored in place? [N]: Y
+
+=== Generated accelerator skeleton for sha256 ===

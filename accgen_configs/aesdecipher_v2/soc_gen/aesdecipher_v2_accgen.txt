@@ -1,0 +1,49 @@
+=== Initializing ESP accelerator template ===
+
+  * Enter accelerator name [dummy]: aesdecipher_v2
+  * Select design flow (Stratus HLS, Vivado HLS, hls4ml, Catapult HLS, RTL) [S]: R
+  * Enter ESP path [/home/elli/sldb_final/esp]: 
+  * Enter unique accelerator id as three hex digits [04A]: 030
+  * Enter accelerator registers
+    - register 0 name [size]: aes_key_0
+    - register 0 default value [1]: 0x01020304
+    - register 0 max value [0x01020304]: 0xFFFFFFFF
+    - register 1 name []: aes_key_1
+    - register 1 default value [1]: 0x05060708
+    - register 1 max value [0x05060708]: 0xFFFFFFFF
+    - register 2 name []: aes_key_2
+    - register 2 default value [1]: 0x090a0b0c
+    - register 2 max value [0x090a0b0c]: 0xFFFFFFFF
+    - register 3 name []: aes_key_3
+    - register 3 default value [1]: 0x0d0e0f10
+    - register 3 max value [0x0d0e0f10]: 0xFFFFFFFF
+    - register 4 name []: aes_key_4
+    - register 4 default value [1]: 0x11121314
+    - register 4 max value [0x11121314]: 0xFFFFFFFF
+    - register 5 name []: aes_key_5
+    - register 5 default value [1]: 0x15161718
+    - register 5 max value [0x15161718]: 0xFFFFFFFF
+    - register 6 name []: aes_key_6
+    - register 6 default value [1]: 0x191a1b1c
+    - register 6 max value [0x191a1b1c]: 0xFFFFFFFF
+    - register 7 name []: aes_key_7
+    - register 7 default value [1]: 0x1d1e1f00
+    - register 7 max value [0x1d1e1f00]: 0xFFFFFFFF
+    - register 8 name []: aes_num_blocks
+    - register 8 default value [1]: 
+    - register 8 max value [1]: 100
+    - register 9 name []: 
+  * Configure PLM size and create skeleton for load and store:
+    - Enter data bit-width (8, 16, 32, 64) [32]: 64
+    - Enter input data size in terms of configuration registers (e.g. 2 * aes_num_blocks}) [aes_num_blocks]: 2*aes_num_blocks
+      data_in_size_max = 200
+    - Enter output data size in terms of configuration registers (e.g. 2 * aes_num_blocks) [aes_num_blocks]: 2*aes_num_blocks
+      data_out_size_max = 200
+    - Enter an integer chunking factor (use 1 if you want PLM size equal to data size) [1]: 
+      Input PLM has 200 64-bits words
+      Output PLM has 200 64-bits words
+    - Enter number of input data to be processed in batch (can be function of configuration registers) [1]: 
+      batching_factor_max = 1
+    - Is output stored in place? [N]: 
+
+=== Generated accelerator skeleton for aesdecipher_v2 ===

@@ -1,0 +1,21 @@
+=== Initializing ESP accelerator template ===
+
+  * Enter accelerator name [dummy]: fft_64
+  * Select design flow (Stratus HLS, Vivado HLS, hls4ml, Catapult HLS, RTL) [S]: R
+  * Enter ESP path []: 
+  * Enter unique accelerator id as three hex digits [04A]: 094
+  * Enter accelerator registers
+    - register 0 name [size]: fft_points
+    - register 0 default value []: 64
+    - register 0 max value []: 
+    - register 1 name []: 
+
+  * Configure PLM size and create skeleton for load and store:
+    - Enter data bit-width (8, 16, 32, 64) [32]: 16
+    - Enter input data size in terms of configuration registers (e.g. 2 * param_width) []: 2*fft_points
+    - Enter output data size in terms of configuration registers (e.g. 2 * param_width) []: 2*fft_points
+    - Enter an integer chunking factor (use 1 if you want PLM size equal to data size) []: 
+    - Enter number of input data to be processed in batch (can be function of configuration registers) []: 1
+    - Is output stored in place? [N]: 
+
+=== Generated accelerator skeleton for fft_64 ===
