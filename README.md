@@ -14,7 +14,7 @@ The System-Level Design Benchmark (SLDB) is a comprehensive benchmark suite tail
 * **10 Baseline Heterogeneous SoC Designs:** Each design integrates accelerators from various application domains (cryptography, deep learning, image processing) into a baseline 2x2 tile ESP architecture.
 * **Synthetic Library:** Combines baseline accelerators into various configurations.
 * **Complete Integration Environment:** Full integration and configuration files, DMA wrapper templates, testing application code (baremetal and Linux-compatible).
-* **Evaluation Metrics:** Provides power, area, and performance metrics from FPGA synthesis, and enables functional correctness assessments through detailed accelerator processing stages (Configuration, Load, Compute, Store).
+* **Evaluation Metrics:** Enables functional correctness assessments through detailed accelerator processing stages (Configuration, Load, Compute, Store).
 
 ## Accelerator Designs Included
 
@@ -75,10 +75,13 @@ python3 choose_acc_files.py
 
 ### Running a Benchmark
 
-4. **Add Benchmark RTL to the ESP SoC**: After the SoC generation is complete, you should be able to see a folder at ``` esp/accelerators/rtl/$ACCNAME_rtl/``` containing the ESP generated templates for the accelerator code. 
-    1. Copy the contents of ``` integrated_acc/$ACCNAME/$ACCNAME_rtl into esp/accelerators/rtl/$ACCNAME_rtl/ ```. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
+1. **Add third party RTL to the ESP SoC**: After the SoC generation is complete, you should be able to see a folder at ``` esp/accelerators/rtl/$ACCNAME_rtl/``` containing the ESP generated templates for the accelerator code. 
+    1. Copy the contents of ``` selected_accelerator_files/$ACCNAME/ into esp/accelerators/rtl/$ACCNAME_rtl/hw/src/$ACCNAME_rtl_basic_dma64/ ```. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
 
-5. **Generating a bitstream**: 
+2. **Add the SLDB wrappers to the ESP SoCs**: 
+    1. Copy ``` SLDB_wrappers/$ACCNAME/ into esp/accelerators/rtl/$ACCNAME_rtl/src/$ACCNAME_rtl_basic_dma64/ ```. 
+
+3. **Generating a bitstream**: 
     1.  ```bash 
         make $ACCNAME_rtl-hls
         ```

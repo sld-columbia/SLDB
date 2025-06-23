@@ -29,7 +29,7 @@ ACCELERATORS = [
     # AES-256 repo has two different accelerators under sub-folders:
     {
         "name":  "aescipher",
-        "files": ["aescipher.v","cipherTest.v","keyExpansion.v","sBox.v",
+        "files": ["aesCipher.v","cipherTest.v","keyExpansion.v","sBox.v",
                   "shiftRow.v","mixColumn.v","roundlast.v","rounds.v",
                   "subBytes.v"],
         "search_hint": "Abhishake567/Verilog-Implementation-of-AES-256-algorithm/Encryption"
@@ -46,7 +46,7 @@ ACCELERATORS = [
     # ---- all remaining accelerators correspond 1-to-1 with a repo ----
     {
         "name":  "conv_new",
-        "files": ["conv_new.v"],
+        "files": ["conv.v"],
         "search_hint": ""        # empty → search the whole tree
     },
     {
@@ -59,18 +59,18 @@ ACCELERATORS = [
     },
     {
         "name":  "fft_64",
-        "files": ["adder.v","complex_multiplier.v","fft_64.v","FFT_block.v",
+        "files": ["adder.v","complex_multiplier.v","FFT_64pt.v","FFT_block.v",
                   "memory.v","twiddle_factors.v"],
         "search_hint": ""
     },
     {
         "name":  "sha256",
-        "files": ["sha256.v","sha256_w_mem.v"],
+        "files": ["sha256_top.v","sha256_w_mem.v"],
         "search_hint": ""
     },
     {
         "name":  "simple_dnn",
-        "files": ["appro_func.v","dnn_soc.v","relu.v","simple_dnn.v"],
+        "files": ["appro_func.v","dnn_soc.v","relu.v","sigmoid.v","dnn_soh.v"],
         "search_hint": ""
     },
     {
