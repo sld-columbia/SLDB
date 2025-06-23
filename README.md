@@ -1,10 +1,10 @@
-# ![image](https://github.com/user-attachments/assets/dbe071b8-a2dc-41ed-a44a-fdb6fd64f052)
+# ![image1](SLDB_LOGO.png)
 
 ## Overview
 
 The **System-Level Design Benchmark (SLDB)** is a comprehensive benchmark suite tailored to evaluate Large Language Models (LLMs) performance in system-level integration and configuration tasks for heterogeneous System-on-Chip (SoC) designs. Developed to bridge the gap between component-level benchmarks and realistic SoC scenarios, SLDB enables researchers and practitioners to assess the capabilities of LLMs in system-level design tasks.  
 <br>  
-![image](https://github.com/user-attachments/assets/c529df9f-00dc-4414-b467-3d1cc96afb98)
+![image2](SLDB_IMG.png)
 
 ---
 
