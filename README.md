@@ -79,7 +79,7 @@ python3 choose_acc_files.py
     1. Copy the contents of ``` selected_accelerator_files/$ACCNAME/ into esp/accelerators/rtl/$ACCNAME_rtl/hw/src/$ACCNAME_rtl_basic_dma64/ ```. Make sure the SoC configuration is identical to the one in the file from Step 1, otherwise compatibility issues may occur.
 
 2. **Add the SLDB wrappers to the ESP SoCs**: 
-    1. Copy ``` SLDB_wrappers/$ACCNAME/ into esp/accelerators/rtl/$ACCNAME_rtl/src/$ACCNAME_rtl_basic_dma64/ ```. 
+    1. Copy ``` SLDB_wrappers/$ACCNAME_rtl_basic_dma64.v into esp/accelerators/rtl/$ACCNAME_rtl/src/$ACCNAME_rtl_basic_dma64/ ```. 
 
 3. **Generating a bitstream**: 
     1.  ```bash 
