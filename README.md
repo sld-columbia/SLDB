@@ -76,14 +76,30 @@ For the RTL-Repo accelerators:
    python3 get_rtl_repo_acc.py
    ```
 
+
 2.  
    ```bash
    python3 choose_acc_files.py
    ```
 
+For the Koios accelerators:
+
+1. 
+    ```bash 
+    mkdir selected_accelerator_files/spmv
+    cp ./vtr-verilog-to-routing/vtr_flow/benchmarks/verilog/koios/spmv.v selected_accelerator_files/spmv/spmv.v
+    ```
+
+2. 
+    ```bash 
+    mkdir selected_accelerator_files/lstm
+    cp ./vtr-verilog-to-routing/vtr_flow/benchmarks/verilog/koios/lstm.v selected_accelerator_files/lstm/lstm.v
+    ```
+
+
+
 3. Rename the top module of each accelerator to the accelerator name you used for SoC generation.
 
----
 
 ### SoC Generation
 
