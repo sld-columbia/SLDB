@@ -1,0 +1,1 @@
+Given the input configuration, input wrapper template and input accelerator, modify the wrapper to integrate the accelerator while being consistent with the configuration. Do not change any of the wrapper ports. RESET FOR THE WRAPPER IS ACTIVE LOW. 
